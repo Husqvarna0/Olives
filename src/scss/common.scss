@@ -1,1 +1,20 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.title {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 32, 16);
+	line-height: math.div(42, 32);
+	color: $brownColor;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: rem(138);
+		height: rem(15);
+		top: rem(-28);
+		left: rem(-10);
+		background: url('img/icons/title-icon.svg');
+	}
+
+}
