@@ -18,3 +18,37 @@
 	}
 
 }
+
+.hover-link {
+	cursor: pointer;
+	position: relative;
+	transition: color 0.3s ease 0s;
+
+	&::after {
+		content: '';
+		content: "";
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: $brownColor;
+		transition: width 0.3s ease 0s;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $brownColor;
+
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				content: '';
+				width: 100%;
+			}
+		}
+	}
+}
