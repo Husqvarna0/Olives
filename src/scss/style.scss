@@ -446,10 +446,10 @@ body {
 		color: $brownColor;
 		text-align: center;
 
-		@media (max-width:$mobileSmall){
-			 display: flex;
-			 flex-direction: column;
-			 align-items: center; 
+		@media (max-width:$mobileSmall) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 
@@ -474,7 +474,7 @@ body {
 		font-weight: 500;
 		@include adaptiveValue("font-size", 18, 14);
 		line-height: math.div(24, 18);
-		
+
 		right: rem(15);
 		bottom: rem(-95);
 
@@ -562,4 +562,134 @@ body {
 	}
 }
 
-.title {}
+//========================================================================================================================================================
+.page {
+
+	&__business {}
+}
+
+.business {
+	position: relative;
+	padding: rem(310) rem(0) rem(374) rem(0);
+
+	&__container {
+		position: relative;
+		z-index: 2;
+		@include adaptiveValue("padding-left", 400, 200);
+		text-align: center;
+
+		@media (max-width:$tablet) {
+			padding-left: 0;
+		}
+	}
+
+	&__header {}
+
+	&__sub-title {
+		color: $brownColor;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(24, 18);
+		letter-spacing: rem(0.2);
+
+	}
+
+	&__title {
+		margin-top: rem(15);
+		color: $brownColor;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 44, 30);
+		line-height: math.div(54, 44);
+
+		span {
+			color: $greenColor;
+		}
+	}
+
+	&__content {
+		margin-top: rem(40);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	&__text {
+
+		color: $brownColor;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: math.div(24, 18);
+		letter-spacing: rem(0.2);
+		max-width: rem(475);
+	}
+
+	&__link {
+		margin-top: rem(41);
+		display: block;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 14, 10);
+		line-height: math.div(18, 14);
+		@include adaptiveValue("padding-right", 50, 25);
+		@include adaptiveValue("padding-left", 50, 25);
+		@include adaptiveValue("padding-top", 20, 20);
+		@include adaptiveValue("padding-bottom", 20, 20);
+		letter-spacing: 0.2px;
+		color: #fff;
+		background-color: $greenColor;
+		border-radius: rem(5);
+		transition: background-color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #566404;
+			}
+		}
+	}
+
+	&__background-image-1 {
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+		}
+
+	}
+
+	&__background-image-2 {
+		position: absolute;
+		top: 0;
+		@include adaptiveValue("left", 0, -340);
+		//left: 0;
+
+		@media (max-width:$tablet) {
+			position: static;
+			left: 0;
+
+		}
+
+
+		img {
+			z-index: 1;
+			height: rem(653);
+			width: rem(1163);
+
+			position: absolute;
+
+			top: rem(124);
+			left: rem(115);
+
+			@media (max-width:$tablet) {
+				visibility: hidden;
+			}
+
+		}
+	}
+}
+
+//========================================================================================================================================================
