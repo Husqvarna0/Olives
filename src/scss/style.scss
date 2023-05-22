@@ -36,12 +36,15 @@ $minWidth: 320;
 $maxWidth: 1368;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
 $maxWidthContainer: 1170;
+$maxWidthContainerBig: 1300;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
 
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidthBig: $maxWidthContainerBig + $containerPadding;
+
 
 // Брейк-поїнти
 $pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні

@@ -13,10 +13,20 @@
 		display: flex;
 		gap: rem(100);
 		padding: rem(18) rem(0) rem(205) rem(0);
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+			padding: rem(18) rem(0) rem(105) rem(0);
+		}
 	}
 
 	&__column {
 		display: flex;
+
+		@media (max-width:$mobileSmall){
+			 justify-content: space-between; 
+		}
+
 	}
 
 	&__list {
@@ -75,23 +85,33 @@
 		display: flex;
 		gap: rem(57);
 
+		@media (max-width:rem(500)) {
+			flex-direction: column;
+
+		}
+
 	}
 
 	&__copyright {
 		position: absolute;
 		bottom: rem(140);
-		left: rem(300);
+
+		left: rem(15);
 		font-weight: 400;
 		@include adaptiveValue("font-size", 12, 8);
 		line-height: math.div(16, 12);
 		letter-spacing: rem(0.2);
 		color: $greenColor;
 
+		@media (max-width:$tablet) {
+			bottom: rem(240);
+			font-size: rem(10);
+		}
+
 	}
 
 	&__container-big {
 		margin: rem(0) rem(0) rem(0) rem(0);
-		//min-width: 100%;
 		bottom: 0;
 		left: 0;
 		background-color: $greenColor;
@@ -105,24 +125,36 @@
 		align-items: center;
 		display: grid;
 		grid-template-columns: 1fr 20% 1fr;
-		@include adaptiveValue("padding-right", 276, 50);
-		@include adaptiveValue("padding-left", 276, 50);
-		padding-top: rem(36);
-		padding-bottom: rem(36);
+		padding: rem(36) rem(0);
+
+		@media (max-width:$tablet) {
+			display: flex;
+			flex-direction: column;
+			gap: rem(30);
+		}
+
 
 
 
 	}
 
 	&__info {
-		
+
 		color: #fff;
 		display: flex;
 		gap: rem(7);
+
+
 		font-weight: 500;
 		@include adaptiveValue("font-size", 14, 8);
 		line-height: math.div(18, 14);
 		letter-spacing: 0.1px;
+
+		@media (max-width:$mobileSmall){
+			 span{
+				display: none;
+			 } 
+		}
 	}
 
 	&__logo {
@@ -184,6 +216,8 @@
 		line-height: math.div(16, 12);
 		letter-spacing: rem(0.2);
 		color: $greenColor;
+
+		
 
 	}
 

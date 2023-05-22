@@ -10,7 +10,7 @@
 	&__sign-up {
 		background-color: $greenColor;
 		padding: rem(17) rem(0);
-		
+
 		font-weight: 400;
 		@include adaptiveValue("font-size", 14, 10);
 		line-height: math.div(22, 14);
@@ -58,14 +58,22 @@
 	position: relative;
 
 	&__content {
+		padding: rem(0) rem(15) ;
 		text-align: center;
 		//display: flex;
+		@media (max-width:$mobile){
+			text-align: left;
+			max-width: rem(300);
+		}
 	}
 
 	&__button {
 		position: absolute;
 		top: rem(14);
 		right: 10%;
+		@media (max-width:$mobileSmall){
+			 right: 5%; 
+		}
 	}
 
 	&__close {
@@ -139,7 +147,7 @@
 .__close {
 	display: none;
 
-	
+
 }
 
 .menu {
@@ -212,6 +220,10 @@
 		cursor: pointer;
 		position: relative;
 		transition: color 0.3s ease 0s;
+
+		@media (max-width:$mobile){
+			 font-size: rem(14); 
+		}
 
 		&::after {
 			content: '';
